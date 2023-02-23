@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:id="@+id/jdl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:textFontWeight="@integer/material_motion_duration_short_1"
+        android:text="MENGHITUNG BERAT BADAN IDEAL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNama"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Nama"
+        android:textSize="17sp"
+        android:textColor="#333333"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jdl" />
+
+    <EditText
+        android:id="@+id/txtTinggiBdn"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Tinggi Badan"
+        android:textSize="17sp"
+        android:textColor="#333333"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/txtNama"
+        app:layout_constraintTop_toBottomOf="@+id/txtNama" />
+
+    <TextView
+        android:id="@+id/cm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CM"
+        android:textSize="17sp"
+        android:textColor="#333333"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTinggiBdn"
+        app:layout_constraintEnd_toEndOf="@+id/txtNama"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtTinggiBdn"
+        app:layout_constraintTop_toTopOf="@+id/txtTinggiBdn"
+        app:layout_constraintVertical_bias="0.517" />
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Pilih Jenis Kelamin"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toEndOf="@+id/cm"
+        app:layout_constraintStart_toStartOf="@+id/txtTinggiBdn"
+        app:layout_constraintTop_toBottomOf="@+id/txtTinggiBdn" />
+
+    <RadioGroup
+        android:id="@+id/rbGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/txt1"
+        app:layout_constraintStart_toStartOf="@+id/txt1"
+        app:layout_constraintTop_toBottomOf="@+id/txt1">
+
+        <RadioButton
+            android:id="@+id/rbLK"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Laki-Laki"
+            android:textColor="#333333"/>
+
+        <RadioButton
+            android:id="@+id/rbPR"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Perempuan"
+            android:textColor="#333333" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnHitung"
+        android:layout_width="260dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#499A94"
+        android:text="Hitung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbGroup" />
+
+    <Button
+        android:id="@+id/btnSimpan"
+        android:layout_width="125dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#26BF2C"
+        android:text="Simpan"
+        app:layout_constraintStart_toStartOf="@+id/btnHitung"
+        app:layout_constraintTop_toBottomOf="@+id/btnHitung" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="125dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#BF2626"
+        android:text="Reset"
+        app:layout_constraintEnd_toEndOf="@+id/btnHitung"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnSimpan"
+        app:layout_constraintTop_toBottomOf="@+id/btnHitung" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Berat Badan Ideal Kamu adalah"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSimpan" />
+
+    <TextView
+        android:id="@+id/txtHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textColor="#499A94"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt2"
+        app:layout_constraintStart_toStartOf="@+id/txt2"
+        app:layout_constraintTop_toBottomOf="@+id/txt2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ListData"
+        android:layout_width="260dp"
+        android:layout_height="273dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHasil" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
